@@ -66,7 +66,14 @@ module FreeThePaf
       render 'index'
     end
     
-    get '/postcode' do
+    post '/postcode' do
+      params[:postcode]
+      p = UKPostcode.new(params[:postcode])
+      postcode = p.norm.gsub(" ", "")
+      redirect url(:postcode, :postcode => postcode)
+    end
+    
+    get :postcode, :with => :postcode, :provides => [:html, :json, :xml] do
       p = UKPostcode.new(params[:postcode])
       @postcode = p.norm
       @addresses = Address.where(:postcode => @postcode).sort(:address1)
@@ -103,7 +110,7 @@ module FreeThePaf
     
     get '/random' do
       @address = Address.first(:offset => rand(Address.count))
-      render 'address'
+      render 'address.erb'
     end
   end
 end
