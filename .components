@@ -1,0 +1,9 @@
+---
+:orm: mongomapper
+:test: none
+:mock: none
+:script: none
+:renderer: slim
+:stylesheet: none
+:namespace: FreeThePaf
+:migration_format: number

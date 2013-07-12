@@ -1,0 +1,25 @@
+<h1><%= @address.fulladdress %></h1>
+
+<table class="table">
+	<tr>
+		<th>Address Line 1</th>
+		<td><%= @address.address1 %></td>
+	</tr>
+	<tr>
+		<th>Area</th>
+		<td><%= @address.area %></td>
+	</tr>
+	<tr>
+		<th>Town / City</th>
+		<td><%= @address.town %></td>
+	</tr>
+	<tr>
+		<th>County / Region</th>
+		<td><%= @address.county %></td>
+	</tr>
+	<tr>
+		<th>Postcode</th>
+		<td><%= link_to @address.postcode, "http://data.ordnancesurvey.co.uk/doc/postcodeunit/#{@address.postcode.gsub(" ", "")}" %></td>
+	</tr>
+
+</table>

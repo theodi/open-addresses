@@ -1,0 +1,7 @@
+<h1>Here's the addresses we have for <%= @postcode %></h1>
+
+<ul>
+<% @addresses.each do |address| %>
+	<li><%= link_to address.fulladdress, url_for(:address, :id => address.id) %></li>
+<% end %>
+</ul>

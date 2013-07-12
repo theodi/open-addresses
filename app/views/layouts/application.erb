@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="/stylesheets/bootstrap.min.css" rel="stylesheet" media="screen" />
+<link href="/assets/css/bootstrap-responsive.min.css" rel="stylesheet">
+<style>
+	.hero-unit {
+		padding: 40px;
+	}
+ 
+ .hero-unit h1 {
+		text-align: center;
+		margin-bottom: 20px;
+		font-size: 65px;
+		line-height: 1;
+	}
+	
+	#postcode-form {
+		float: none;
+		margin: 30px auto 10px auto;
+	}
+	
+	#postcode-form input, #postcode-form button {
+		padding: 20px;
+		font-size: 25px;
+	}
+	
+	#postcode-form input {
+		line-height: 25px;
+	}
+	
+	.footer {
+		text-align: center;
+		padding: 30px 0;
+		margin-top: 70px;
+		border-top: 1px solid #e5e5e5;
+		background-color: #f5f5f5;
+	}
+</style>
+<title>OpenAddresses</title>
+</head>
+<body>
+
+	<div class="container">
+		
+		<div class="masthead">
+      <h3 class="muted">OpenAddresses</h3>
+      <div class="navbar">
+        <div class="navbar-inner">
+          <div class="container">
+            <ul class="nav">
+              <li class="active"><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+							<li><a href="/sources">Sources</a></li>
+							<li><a href="/data">Data</a></li>
+            </ul>
+          </div>
+        </div>
+      </div><!-- /.navbar -->
+    </div>
+		
+		<%= yield %>
+	</div>
+
+	<footer class="footer">
+	      <div class="container">
+	        <p>Currently <%= addresscount %> addresses in the database (and counting!)</p>
+				</div>
+	 </footer>
+	
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
+
