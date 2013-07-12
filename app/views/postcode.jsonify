@@ -1,0 +1,9 @@
+json.addresses(@addresses) do |address|
+	json.address1 address.address1
+	json.area address.area 
+	json.town address.town
+	json.county address.county
+	json.postcode address.postcode
+	json.full address.fulladdress
+	json.uri url_for(:address, :id => address.id)
+end

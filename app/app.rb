@@ -77,7 +77,14 @@ module FreeThePaf
       p = UKPostcode.new(params[:postcode])
       @postcode = p.norm
       @addresses = Address.where(:postcode => @postcode).sort(:address1)
-      render 'postcode'
+      case content_type
+        when :html then
+          render 'postcode.erb'
+        when :json then
+          render 'postcode.jsonify'
+        when :xml then
+          render 'postcode.builder'
+      end
     end
     
     get '/about' do
