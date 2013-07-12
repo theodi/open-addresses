@@ -25,6 +25,7 @@ gem 'text'
 gem 'nokogiri'
 gem 'zipruby'
 gem 'redcarpet'
+gem 'jsonify'
 
 # Component requirements
 gem 'slim'

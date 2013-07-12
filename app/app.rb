@@ -89,9 +89,16 @@ module FreeThePaf
       render 'sources', :layout_engine => :erb, :layout => :application
     end
 
-    get :address, :with => :id do
+    get :address, :with => :id, :provides => [:html, :json, :xml] do
       @address = Address.find(params[:id])
-      render 'address'
+      case content_type
+        when :html then
+          render 'address.erb'
+        when :json then
+          render 'address.jsonify'
+        when :xml then
+          render 'address.builder'
+      end
     end
     
     get '/random' do

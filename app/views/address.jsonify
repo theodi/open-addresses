@@ -1,0 +1,8 @@
+json.address do
+	json.address1 @address.address1
+	json.area @address.area 
+	json.town @address.town
+	json.county @address.county
+	json.postcode @address.postcode
+	json.full @address.fulladdress
+end 

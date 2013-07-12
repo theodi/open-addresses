@@ -64,6 +64,8 @@ GEM
       json (>= 1.7.5)
       rdf (>= 1.0)
     json_pure (1.8.0)
+    jsonify (0.4.1)
+      multi_json (~> 1.3)
     linkeddata (1.0.5)
       json-ld (>= 0.9.1)
       rdf (>= 1.0.5)
@@ -165,6 +167,7 @@ PLATFORMS
 DEPENDENCIES
   bson_ext
   httparty
+  jsonify
   linkeddata
   mongo_mapper
   nokogiri
