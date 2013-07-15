@@ -5,5 +5,5 @@ json.addresses(@addresses) do |address|
 	json.county address.county
 	json.postcode address.postcode
 	json.full address.fulladdress
-	json.uri url_for(:address, :id => address.id)
+	json.uri url_for(:address, :address, :id => address.id)
 end

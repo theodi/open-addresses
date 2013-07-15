@@ -8,7 +8,7 @@ xml.addresses do
     	xml.county address.county
     	xml.postcode address.postcode
     	xml.full address.fulladdress
-    	xml.uri url_for(:address, :id => address.id)
+    	xml.uri url_for(:address, :address, :id => address.id)
     end
   end
 end

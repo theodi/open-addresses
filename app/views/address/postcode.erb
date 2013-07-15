@@ -2,6 +2,6 @@
 
 <ul>
 <% @addresses.each do |address| %>
-	<li><%= link_to address.fulladdress, url_for(:address, :id => address.id) %></li>
+	<li><%= link_to address.fulladdress, url_for(:address, :address, :id => address.id) %></li>
 <% end %>
 </ul>
